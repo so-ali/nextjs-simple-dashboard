@@ -6,7 +6,7 @@ import { forwardRef, memo, Ref } from "react";
 export default memo(
   forwardRef(function Input(
     { error, ...props }: IInputProps,
-    ref: Ref<HTMLInputElement>
+    ref: Ref<HTMLInputElement>,
   ) {
     return (
       <input
@@ -17,5 +17,5 @@ export default memo(
         ref={ref}
       />
     );
-  })
+  }),
 );

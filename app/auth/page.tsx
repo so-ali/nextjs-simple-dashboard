@@ -2,7 +2,7 @@
 
 import LoginForm from "@/components/organisms/LoginForm/LoginForm";
 import { ILoginFormData } from "@/components/organisms/LoginForm/LoginForm.types";
-import AuthTemplate from "@/components/templates/AuthTemplate/AuthTemplate";
+import { AuthTemplate } from "@/components/templates";
 import { useAuth } from "@/hooks/useAuth";
 import { useRouter } from "next/navigation";
 import { useEffect } from "react";

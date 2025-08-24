@@ -10,7 +10,7 @@ export const useLocalStorage = () => {
       const getData = window.localStorage.getItem(key);
       return getData ? JSON.parse(getData) : undefined;
     },
-    [isBrowser]
+    [isBrowser],
   );
 
   const set = useCallback(
@@ -18,7 +18,7 @@ export const useLocalStorage = () => {
       if (!isBrowser) return;
       window.localStorage.setItem(key, JSON.stringify(value));
     },
-    [isBrowser]
+    [isBrowser],
   );
 
   const remove = useCallback(
@@ -26,7 +26,7 @@ export const useLocalStorage = () => {
       if (!isBrowser) return;
       window.localStorage.removeItem(key);
     },
-    [isBrowser]
+    [isBrowser],
   );
 
   return { get, set, remove };

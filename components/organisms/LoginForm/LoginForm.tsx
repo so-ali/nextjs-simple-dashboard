@@ -12,7 +12,7 @@ export default function LoginForm({ onSubmit }: ILoginFormProps) {
   const {
     register,
     handleSubmit,
-    formState: { isLoading, isSubmitting, errors, isValid },
+    formState: { isLoading, isSubmitting, errors },
   } = useForm({
     resolver: zodResolver(SchemaLoginForm),
   });
@@ -42,7 +42,6 @@ export default function LoginForm({ onSubmit }: ILoginFormProps) {
         variant="primary"
         type="submit"
         loading={isLoading || isSubmitting}
-        disabled={!isValid}
         block
       >
         Login
