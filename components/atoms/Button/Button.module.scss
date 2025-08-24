@@ -1,0 +1,30 @@
+@use "../../../styles/variables" as *;
+@use "../../../styles/mixins" as *;
+
+.button {
+  @include button();
+  font-size: $font-size-base;
+  background-color: #eee;
+  color: #222;
+
+  &:hover {
+    background-color: darken(#eee, 10%);
+  }
+
+  &--primary {
+    background-color: $color-primary;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($color-primary, 10%);
+    }
+  }
+  &--secondary {
+    background-color: $color-secondary;
+    color: #fff;
+
+    &:hover {
+      background-color: darken($color-secondary, 10%);
+    }
+  }
+}

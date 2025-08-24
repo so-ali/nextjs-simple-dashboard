@@ -1,0 +1,28 @@
+/** Colors variables **/
+$color-primary: #4f46e5;
+$color-secondary: #555;
+
+/** Sizes variables **/
+$size-radius: 16px;
+$size-gap: 12px;
+
+/** Typography variables **/
+//Font families
+$font-family-main: var(--font-quicksand, "arial"), sans-serif;
+
+// Font weights
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+
+// Base text sizes
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
+// Headings scale (responsive ready)
+$h1-size: 2.25rem; // ~36px
+$h2-size: 1.875rem; // ~30px
+$h3-size: 1.5rem; // ~24px
+$h4-size: 1.25rem; // ~20px
+$h5-size: 1.125rem; // ~18px
+$h6-size: 1rem; // ~16px

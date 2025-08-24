@@ -1,0 +1,62 @@
+@use "./variables" as *;
+
+// Typography utility classes
+body {
+  font-family: $font-family-main;
+  font-size: $font-size-base;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-base;
+}
+
+// Headings (reset margins, consistent rhythm)
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $font-family-main;
+  font-weight: $font-weight-bold;
+  line-height: 1.25;
+  margin: 0 0 0.75em;
+}
+
+h1 {
+  font-size: $h1-size;
+}
+h2 {
+  font-size: $h2-size;
+}
+h3 {
+  font-size: $h3-size;
+}
+h4 {
+  font-size: $h4-size;
+}
+h5 {
+  font-size: $h5-size;
+}
+h6 {
+  font-size: $h6-size;
+}
+
+// Paragraph
+p {
+  margin: 0 0 1em;
+}
+
+// Links
+a {
+  color: #2563eb;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+// Small text
+small {
+  font-size: 0.875rem;
+  color: #555;
+}

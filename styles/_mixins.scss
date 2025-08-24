@@ -1,0 +1,36 @@
+@use "./variables" as *;
+
+// Button mixin
+@mixin button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: $size-radius;
+  cursor: pointer;
+  transition: 0.2s;
+
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+}
+
+// Text input mixin
+@mixin text-input {
+  padding: 0.5em;
+  border: 1px solid #ccc;
+  border-radius: $size-radius;
+  font-size: 1em;
+  transition: border-color 0.2s;
+
+  &:focus {
+    border-color: darken(#ccc, 20%);
+    outline: none;
+  }
+}
+
+// Card mixin
+@mixin card {
+  padding: 1.5em;
+  border: 1px solid #ccc;
+  border-radius: $size-radius;
+}
