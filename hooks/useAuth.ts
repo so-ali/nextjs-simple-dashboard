@@ -13,6 +13,9 @@ export const useAuth = () => {
       authContext.setUser(data);
       localStorage.set("user", data);
     },
+    onError(error) {
+      console.error("Login failed:", error);
+    },
   });
 
   return { login, user: authContext.user, logout: authContext.clearUser };
