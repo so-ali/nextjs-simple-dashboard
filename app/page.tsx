@@ -2,8 +2,10 @@
 import { Button } from "@/components/atoms";
 import { useRouter } from "next/navigation";
 import style from "./Home.module.scss";
+import { useAuth } from "@/hooks/useAuth";
 
 export default function Home() {
+  const { user } = useAuth();
   const router = useRouter();
   return (
     <div className={style.container}>
@@ -14,10 +16,14 @@ export default function Home() {
       <Button
         variant="primary"
         onClick={() => {
+          if (user) {
+            router.push("/dashboard");
+            return;
+          }
           router.push("/auth");
         }}
       >
-        Continue to the login
+        Continue to the {user === null ? "login" : "dashboard"}
       </Button>
     </div>
   );

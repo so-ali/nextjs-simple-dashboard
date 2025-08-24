@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Quicksand } from "next/font/google";
 import "@/styles/globals.scss";
+import AppContextProvider from "@/contexts/providers/AppContextProvider";
 
 const quicksand = Quicksand({
   variable: "--font-quicksand",
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${quicksand.variable} antialiased`}>{children}</body>
+      <body className={`${quicksand.variable} antialiased`}>
+        <AppContextProvider>{children}</AppContextProvider>
+      </body>
     </html>
   );
 }

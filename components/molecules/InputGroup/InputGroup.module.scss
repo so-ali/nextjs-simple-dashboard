@@ -1,0 +1,21 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.label {
+  display: block;
+  font-size: 1rem;
+  color: #444;
+}
+
+.error {
+  display: block;
+  font-size: 0.87rem;
+  color: #b42626;
+}

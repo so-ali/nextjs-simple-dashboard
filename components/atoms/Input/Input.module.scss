@@ -1,0 +1,11 @@
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+
+.input {
+  @include text-input;
+  width: 100%;
+}
+
+.error {
+  border-color: rgb(184, 22, 22) !important;
+}

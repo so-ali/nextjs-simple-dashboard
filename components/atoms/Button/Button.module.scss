@@ -1,14 +1,18 @@
-@use "../../../styles/variables" as *;
-@use "../../../styles/mixins" as *;
+@use "@/styles/variables" as *;
+@use "@/styles/mixins" as *;
+@use "sass:color";
 
 .button {
   @include button();
+  display: inline-flex;
+  gap: 0.4rem;
+  align-items: center;
   font-size: $font-size-base;
   background-color: #eee;
   color: #222;
 
   &:hover {
-    background-color: darken(#eee, 10%);
+    background-color: color.adjust(#eee, $lightness: -10%);
   }
 
   &--primary {
@@ -16,7 +20,7 @@
     color: #fff;
 
     &:hover {
-      background-color: darken($color-primary, 10%);
+      background-color: color.adjust($color-primary, $lightness: -10%);
     }
   }
   &--secondary {
@@ -24,7 +28,41 @@
     color: #fff;
 
     &:hover {
-      background-color: darken($color-secondary, 10%);
+      background-color: color.adjust($color-secondary, $lightness: -10%);
     }
+  }
+
+  &--block {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  &--loading {
+    &::before {
+      content: "";
+      display: block;
+      width: $font-size-base;
+      height: $font-size-base;
+      border-radius: 100%;
+      border-width: 2px;
+      border-style: dotted;
+      animation: spin 1s infinite linear;
+    }
+  }
+
+  &[disabled] {
+    opacity: 0.8;
+    pointer-events: none;
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
   }
 }

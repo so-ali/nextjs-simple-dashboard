@@ -1,4 +1,5 @@
 @use "./variables" as *;
+@use "sass:color";
 
 // Button mixin
 @mixin button {
@@ -7,6 +8,8 @@
   border-radius: $size-radius;
   cursor: pointer;
   transition: 0.2s;
+  user-select: none;
+  -webkit-user-select: none;
 
   &:hover,
   &:focus {
@@ -23,7 +26,7 @@
   transition: border-color 0.2s;
 
   &:focus {
-    border-color: darken(#ccc, 20%);
+    border-color: color.adjust(#ccc, $lightness: -10%);
     outline: none;
   }
 }
